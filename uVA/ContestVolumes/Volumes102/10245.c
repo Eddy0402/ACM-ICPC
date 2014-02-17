@@ -15,47 +15,30 @@ int main(void){
     while(scanf("%d",&pointCount) != EOF){
 	if(pointCount == 0)break;
 	data = (Point *)malloc(sizeof(Point) * pointCount);
-
 	for(i = 0; i < pointCount; i++)
 	    scanf("%lf%lf",&((data+i) -> x),&((data+i) -> y));
-
 	qsort(data,pointCount,sizeof(Point),compare);
-
 	result = getClosestPair(data,0,pointCount - 1);
 	result <= 10000.0000 ? printf("%.4f\n",result) : puts("INFINITY");
+        free(data);
     }
     return 0;
 }
 double getClosestPair(Point *data,int start,int end){
     const int middle = start + (end - start) / 2;
-    int lastTestPoint = middle + 1, firstTestPoint = middle;
-    int i, j;
+    int lastTestPoint = middle + 1, firstTestPoint = middle, i, j;
     double left,right,result,temp;
     if(end == start)return 10001.0f;
     left  = getClosestPair(data, start, middle);
     right = getClosestPair(data, middle + 1, end);
     result = left > right ? right : left ;
-
-    while( (data + middle) -> x - (data + firstTestPoint) -> x < result / 2)
-	if(firstTestPoint <= start){
-	    firstTestPoint = start;
-	    break;
-	}else{
-	    firstTestPoint--;
-	}
-    while( (data + (lastTestPoint)) -> x - (data + middle) -> x < result / 2)
-	if(lastTestPoint >= end){
-	    lastTestPoint = end;
-	    break;
-	}else{
-	    lastTestPoint++;
-	}
-    for(i = firstTestPoint;i <= middle; i++){
+    while( (data + middle) -> x - (data + firstTestPoint) -> x < result / 2 && firstTestPoint > start)firstTestPoint--;
+    while( (data + (lastTestPoint)) -> x - (data + middle) -> x < result / 2 && lastTestPoint < end)lastTestPoint++;
+    for(i = firstTestPoint;i <= middle; i++)
 	for(j = middle + 1;j <= lastTestPoint; j++){
 	    temp = getDist(data + i, data + j);
 	    if(temp < result)result = temp;
 	}
-    }
     return result;
 }
 double getDist(Point *p1,Point *p2){
