@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Count	11987.cpp	/^		int Count(int a){ return count[root(a)]; }$/;"	f	class:Set	access:public	signature:(int a)
+Set	11987.cpp	/^		Set(int Count){$/;"	f	class:Set	access:public	signature:(int Count)
+Set	11987.cpp	/^class Set{$/;"	c	file:
+Set::Count	11987.cpp	/^		int Count(int a){ return count[root(a)]; }$/;"	f	class:Set	access:public	signature:(int a)
+Set::Set	11987.cpp	/^		Set(int Count){$/;"	f	class:Set	access:public	signature:(int Count)
+Set::Sum	11987.cpp	/^		int Sum(int a){ return sum[root(a)]; }$/;"	f	class:Set	access:public	signature:(int a)
+Set::add	11987.cpp	/^		void add(int a,int b){$/;"	f	class:Set	access:public	signature:(int a,int b)
+Set::count	11987.cpp	/^		vector<int> count;$/;"	m	class:Set	file:	access:public
+Set::move	11987.cpp	/^		void move(int number,int target){$/;"	f	class:Set	access:public	signature:(int number,int target)
+Set::newNo	11987.cpp	/^		vector<int> newNo;$/;"	m	class:Set	file:	access:public
+Set::persons	11987.cpp	/^		vector<int> persons;$/;"	m	class:Set	file:	access:public
+Set::root	11987.cpp	/^		int root(int a){$/;"	f	class:Set	access:public	signature:(int a)
+Set::sum	11987.cpp	/^		vector<int> sum;$/;"	m	class:Set	file:	access:public
+Sum	11987.cpp	/^		int Sum(int a){ return sum[root(a)]; }$/;"	f	class:Set	access:public	signature:(int a)
+add	11987.cpp	/^		void add(int a,int b){$/;"	f	class:Set	access:public	signature:(int a,int b)
+count	11987.cpp	/^		vector<int> count;$/;"	m	class:Set	file:	access:public
+input	11995.cpp	/^char input [2000000];$/;"	v
+main	11987.cpp	/^int main(){$/;"	f	signature:()
+main	11995.cpp	/^int main(void){$/;"	f	signature:(void)
+move	11987.cpp	/^		void move(int number,int target){$/;"	f	class:Set	access:public	signature:(int number,int target)
+newNo	11987.cpp	/^		vector<int> newNo;$/;"	m	class:Set	file:	access:public
+persons	11987.cpp	/^		vector<int> persons;$/;"	m	class:Set	file:	access:public
+root	11987.cpp	/^		int root(int a){$/;"	f	class:Set	access:public	signature:(int a)
+sum	11987.cpp	/^		vector<int> sum;$/;"	m	class:Set	file:	access:public
