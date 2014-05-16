@@ -12,7 +12,9 @@ struct GetRoot{
 		int temp = a;
 		while(Up[a] != a) a = Up[a];
 		Up[temp] = a;
-return a;};};
+		return a;
+	}
+};
 int main(){
 	int TestCase, flag = false;
 	scanf("%d",&TestCase);
